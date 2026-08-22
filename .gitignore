@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+server.log
+backups/
+content/backups/
+dist/
+subpath-test/
+css/*.bak*
+assets/incoming/
+.claude/

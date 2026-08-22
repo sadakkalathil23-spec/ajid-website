@@ -1,0 +1,526 @@
+{
+  "theme": {
+    "background": "#d5cfc6",
+    "foreground": "#061229",
+    "heading": "#061229",
+    "accent": "#582c00",
+    "invertBg": "#061229",
+    "invertFg": "#d5cfc6",
+    "heroInk": "#d5cfc6",
+    "heroNavInk": "#ffffff",
+    "navSize": "var(--fs-sm)"
+  },
+  "brandPalette": [
+    {
+      "name": "Stone Beige",
+      "nameAr": "بيج حجري",
+      "hex": "#d5cfc6"
+    },
+    {
+      "name": "Deep Navy",
+      "nameAr": "كحلي داكن",
+      "hex": "#061229"
+    },
+    {
+      "name": "Walnut Brown",
+      "nameAr": "بني جوزي",
+      "hex": "#582c00"
+    },
+    {
+      "name": "Stone Gray",
+      "nameAr": "رمادي حجري",
+      "hex": "#828282"
+    },
+    {
+      "name": "Deep Burgundy",
+      "nameAr": "عنابي داكن",
+      "hex": "#4d1615"
+    },
+    {
+      "name": "Mist Blue",
+      "nameAr": "أزرق ضبابي",
+      "hex": "#748796"
+    }
+  ],
+  "images": {
+    "hero": [
+      "/assets/img/hero-1.webp",
+      "/assets/img/hero-2.webp",
+      "/assets/img/hero-3.webp",
+      "/assets/img/hero-4.webp",
+      "/assets/img/hero-5.webp"
+    ],
+    "feature": [
+      "/assets/img/feat-1.webp",
+      "/assets/img/feat-2.webp",
+      "/assets/img/feat-3.webp"
+    ],
+    "closing": "/assets/img/closing.webp",
+    "chapter1": "/assets/img/feat-2.webp",
+    "chapter2": "/assets/img/feat-3.webp",
+    "wordmarkFillLat": "/assets/img/wordmark-fill-lat.webp",
+    "wordmarkFillAr": "/assets/img/wordmark-fill-ar.webp"
+  },
+  "contact": {
+    "email": "hello@ajid.qa",
+    "phone": "+974 4000 0000",
+    "phoneHref": "+97440000000",
+    "instagram": "#",
+    "linkedin": "#",
+    "pinterest": "#"
+  },
+  "en": {
+    "lang": "en",
+    "dir": "ltr",
+    "title": "Studio Ajid — Interior Design Studio, Doha",
+    "metaDescription": "Studio Ajid is an interior design studio in Doha where art and craftsmanship lead the work — familiar elements of Qatari homes reinterpreted in a contemporary language.",
+    "ogDescription": "Art, craftsmanship and local identity, reinterpreted for contemporary Qatari interiors.",
+    "altHref": "/ar/",
+    "altLabel": "العربية",
+    "altLang": "ar",
+    "selfHref": "/",
+    "nav": {
+      "studio": "Studio",
+      "work": "Work",
+      "collections": "Collections",
+      "contact": "Contact",
+      "menu": "Menu",
+      "close": "Close",
+      "home": "AJID — home",
+      "primary": "Primary",
+      "mobile": "Mobile",
+      "homeLabel": "Home"
+    },
+    "hero": {
+      "srTitle": "AJID — Interior Design Studio",
+      "tagline": "Interior Design Studio<br>Doha • Qatar",
+      "scroll": "Scroll"
+    },
+    "features": [
+      {
+        "caption": "Terrazzo floor • Studio Ajid",
+        "alt": "Brass lettering inlaid into terrazzo",
+        "w": 1400,
+        "h": 1867
+      },
+      {
+        "caption": "Office • Lounge",
+        "alt": "Curved sofa beside a floor lamp",
+        "w": 1206,
+        "h": 1608
+      },
+      {
+        "caption": "Studio Floor • Workstations",
+        "alt": "Shared desk with monitors and lamps",
+        "w": 1400,
+        "h": 1867
+      }
+    ],
+    "workSection": {
+      "eyebrow": "Works",
+      "count": "The Studio • Doha"
+    },
+    "work": [
+      {
+        "num": "01",
+        "name": "Lounge",
+        "meta": "2026",
+        "img": "/assets/img/work-01.webp",
+        "soon": false,
+        "year": "Principal's Office",
+        "side": "l",
+        "span": 5,
+        "ar": "4/3",
+        "sub": "",
+        "start": 1,
+        "labw": 270
+      },
+      {
+        "num": "02",
+        "name": "Desk",
+        "meta": "2026",
+        "img": "/assets/img/work-02.webp",
+        "soon": false,
+        "year": "",
+        "side": "r",
+        "span": 11,
+        "ar": "3/4",
+        "sub": "",
+        "start": 6,
+        "labw": 50
+      },
+      {
+        "num": "03",
+        "name": "Detail",
+        "meta": "2026",
+        "img": "/assets/img/work-03.webp",
+        "soon": false,
+        "year": "",
+        "side": "l",
+        "span": 8,
+        "ar": "16/9",
+        "sub": "",
+        "start": 5,
+        "labw": 100
+      },
+      {
+        "num": "04",
+        "name": "Workstations",
+        "meta": "2026",
+        "img": "/assets/img/work-04.webp",
+        "soon": false,
+        "year": "Studio Floor",
+        "side": "r",
+        "span": 5,
+        "ar": "3/4",
+        "sub": "",
+        "start": 10,
+        "labw": 50
+      },
+      {
+        "num": "05",
+        "name": "Desk",
+        "meta": "2026",
+        "img": "/assets/img/work-05.webp",
+        "soon": false,
+        "year": "",
+        "side": "l",
+        "span": 10,
+        "ar": "16/10",
+        "sub": "",
+        "start": 1,
+        "labw": 110
+      },
+      {
+        "num": "06",
+        "name": "Table",
+        "meta": "2026",
+        "img": "/assets/img/work-06.webp",
+        "soon": false,
+        "year": "Meeting Room",
+        "side": "r",
+        "span": 9,
+        "ar": "3/4",
+        "sub": "",
+        "start": 7,
+        "labw": 61
+      },
+      {
+        "num": "07",
+        "name": "Porcelain",
+        "meta": "2026",
+        "img": "/assets/img/work-07.webp",
+        "soon": false,
+        "year": "",
+        "side": "l",
+        "span": 6,
+        "ar": "3/4",
+        "sub": "",
+        "start": 2,
+        "labw": 200
+      },
+      {
+        "num": "08",
+        "name": "Screen",
+        "meta": "2026",
+        "img": "/assets/img/work-08.webp",
+        "soon": false,
+        "year": "",
+        "side": "r",
+        "span": 8,
+        "ar": "3/4",
+        "sub": "",
+        "start": 9,
+        "labw": 50
+      },
+      {
+        "num": "09",
+        "name": "Detail",
+        "meta": "2026",
+        "img": "/assets/img/work-09.webp",
+        "soon": false,
+        "year": "",
+        "side": "l",
+        "span": 9,
+        "ar": "3/4",
+        "sub": "",
+        "start": 3,
+        "labw": 106
+      }
+    ],
+    "footer": {
+      "cta": "Let’s talk",
+      "studioHead": "Studio",
+      "studioLines": [
+        "Msheireb Downtown",
+        "Doha, Qatar"
+      ],
+      "contactHead": "Contact",
+      "followHead": "Follow",
+      "langHead": "Language",
+      "copyright": "© 2026 AJID • Interior Design Studio",
+      "place": "Doha, Qatar",
+      "drawerPlace": "Doha, Qatar",
+      "drawerEst": "Est. 2026",
+      "credit": "Designed in Doha",
+      "rights": "All rights reserved ©2026",
+      "privacy": "Privacy Policy",
+      "talk": "Let’s talk"
+    },
+    "opening": "Studio Ajid is an <strong>interior design studio</strong> in Doha where <strong>art and craftsmanship</strong> sit at the centre of the work. We draw on familiar elements of <strong>Qatari homes</strong> and reinterpret them in a contemporary language that reflects our own identity.",
+    "intro": {
+      "note": "Established 2026 — Doha, Qatar",
+      "body": "The studio is designed entirely without doors, so the spaces stay visually connected and the interior feels open. Privacy comes instead from the placement of walls and the orientation of each opening. The palette is drawn from Qatar's landscape — the deep blue of the sea, and the tones of sand, earth and limestone."
+    },
+    "chapter1": {
+      "heading": "Familiar forms,\nmade new",
+      "body": "The terrazzo flooring recalls the light, speckled courtyard tiles found in older Qatari homes. The entrance partition takes its rhythm from traditional mashrabiya screens, carrying a custom pattern derived from the studio's own visual identity.",
+      "note": "→ Est. 2026\nDoha, Qatar",
+      "noteLink": "[Studio]"
+    },
+    "chapter2": {
+      "heading": "Art at the centre of the space",
+      "note": "Terrazzo • Mashrabiya • Porcelain • Limestone",
+      "quote": "Art is not placed in the space afterwards — it is part of how the space was conceived.",
+      "quoteSource": "[Studio Ajid — Design Concept]",
+      "body": "The interior holds a collection of porcelain pieces designed by Studio Ajid with a French porcelain house in Limoges — work that carries the studio's regard for local identity and fine craftsmanship.",
+      "caption": "Porcelain collection • Limoges"
+    },
+    "chapter3": {
+      "body": "The window openings reference traditional forms, while their black finish sets them in bold contrast against the pale surfaces around them.",
+      "note1": "All original artworks are by Qatari artist Essa, founder of ESSA Art Studio and a partner in Studio Ajid.",
+      "note2": "Terrazzo • Mashrabiya • Porcelain • Sea, sand and limestone"
+    },
+    "closing": {
+      "caption": "Studio Ajid • Doha"
+    },
+    "closingStatement": "Familiar forms, read again in a contemporary hand — so a space belongs to where it stands."
+  },
+  "ar": {
+    "lang": "ar",
+    "dir": "rtl",
+    "title": "استوديو عجيد — استوديو تصميم داخلي، الدوحة",
+    "metaDescription": "استوديو عجيد استوديو تصميم داخلي في الدوحة يضع الفن والحرفية في صميم عمله — عناصر مألوفة من البيت القطري تُعاد صياغتها بلغة معاصرة.",
+    "ogDescription": "الفن والحرفية والهوية المحلية، بصياغة معاصرة لفراغات قطرية.",
+    "altHref": "/",
+    "altLabel": "English",
+    "altLang": "en",
+    "selfHref": "/ar/",
+    "nav": {
+      "studio": "الاستوديو",
+      "work": "الأعمال",
+      "collections": "المجموعات",
+      "contact": "تواصل",
+      "menu": "القائمة",
+      "close": "إغلاق",
+      "home": "عجيد — الصفحة الرئيسية",
+      "primary": "التنقل الرئيسي",
+      "mobile": "قائمة الجوال",
+      "homeLabel": "الرئيسية"
+    },
+    "hero": {
+      "srTitle": "عجيد — استوديو تصميم داخلي",
+      "tagline": "استوديو تصميم داخلي<br>الدوحة • قطر",
+      "scroll": "مرّر"
+    },
+    "features": [
+      {
+        "caption": "أرضية التيرازو • استوديو عجيد",
+        "alt": "حروف نحاسية مطعّمة في التيرازو",
+        "w": 1400,
+        "h": 1867
+      },
+      {
+        "caption": "المكتب • صالة الجلوس",
+        "alt": "أريكة منحنية بجوار مصباح أرضي",
+        "w": 1206,
+        "h": 1608
+      },
+      {
+        "caption": "أرضية الاستوديو • محطات العمل",
+        "alt": "مكتب مشترك بشاشات ومصابيح",
+        "w": 1400,
+        "h": 1867
+      }
+    ],
+    "workSection": {
+      "eyebrow": "الأعمال",
+      "count": "الاستوديو • الدوحة"
+    },
+    "work": [
+      {
+        "num": "01",
+        "name": "صالة الجلوس",
+        "meta": "٢٠٢٦",
+        "img": "/assets/img/work-01.webp",
+        "soon": false,
+        "year": "مكتب المدير",
+        "side": "l",
+        "span": 5,
+        "ar": "4/3",
+        "sub": "",
+        "start": 1,
+        "labw": 270
+      },
+      {
+        "num": "02",
+        "name": "المكتب",
+        "meta": "٢٠٢٦",
+        "img": "/assets/img/work-02.webp",
+        "soon": false,
+        "year": "",
+        "side": "r",
+        "span": 11,
+        "ar": "3/4",
+        "sub": "",
+        "start": 6,
+        "labw": 50
+      },
+      {
+        "num": "03",
+        "name": "تفصيل",
+        "meta": "٢٠٢٦",
+        "img": "/assets/img/work-03.webp",
+        "soon": false,
+        "year": "",
+        "side": "l",
+        "span": 8,
+        "ar": "16/9",
+        "sub": "",
+        "start": 5,
+        "labw": 100
+      },
+      {
+        "num": "04",
+        "name": "محطات العمل",
+        "meta": "٢٠٢٦",
+        "img": "/assets/img/work-04.webp",
+        "soon": false,
+        "year": "أرضية الاستوديو",
+        "side": "r",
+        "span": 5,
+        "ar": "3/4",
+        "sub": "",
+        "start": 10,
+        "labw": 50
+      },
+      {
+        "num": "05",
+        "name": "المكتب",
+        "meta": "٢٠٢٦",
+        "img": "/assets/img/work-05.webp",
+        "soon": false,
+        "year": "",
+        "side": "l",
+        "span": 10,
+        "ar": "16/10",
+        "sub": "",
+        "start": 1,
+        "labw": 110
+      },
+      {
+        "num": "06",
+        "name": "الطاولة",
+        "meta": "٢٠٢٦",
+        "img": "/assets/img/work-06.webp",
+        "soon": false,
+        "year": "غرفة الاجتماعات",
+        "side": "r",
+        "span": 9,
+        "ar": "3/4",
+        "sub": "",
+        "start": 7,
+        "labw": 61
+      },
+      {
+        "num": "07",
+        "name": "البورسلين",
+        "meta": "٢٠٢٦",
+        "img": "/assets/img/work-07.webp",
+        "soon": false,
+        "year": "",
+        "side": "l",
+        "span": 6,
+        "ar": "3/4",
+        "sub": "",
+        "start": 2,
+        "labw": 200
+      },
+      {
+        "num": "08",
+        "name": "الشاشة",
+        "meta": "٢٠٢٦",
+        "img": "/assets/img/work-08.webp",
+        "soon": false,
+        "year": "",
+        "side": "r",
+        "span": 8,
+        "ar": "3/4",
+        "sub": "",
+        "start": 9,
+        "labw": 50
+      },
+      {
+        "num": "09",
+        "name": "تفصيل",
+        "meta": "٢٠٢٦",
+        "img": "/assets/img/work-09.webp",
+        "soon": false,
+        "year": "",
+        "side": "l",
+        "span": 9,
+        "ar": "3/4",
+        "sub": "",
+        "start": 3,
+        "labw": 106
+      }
+    ],
+    "footer": {
+      "cta": "لنتحدّث",
+      "studioHead": "الاستوديو",
+      "studioLines": [
+        "مشيرب قلب الدوحة",
+        "الدوحة، قطر"
+      ],
+      "contactHead": "تواصل",
+      "followHead": "تابعنا",
+      "langHead": "اللغة",
+      "copyright": "© ٢٠٢٦ عجيد • استوديو تصميم داخلي",
+      "place": "الدوحة، قطر",
+      "drawerPlace": "الدوحة، قطر",
+      "drawerEst": "تأسس ٢٠٢٦",
+      "credit": "صُمّم في الدوحة",
+      "rights": "جميع الحقوق محفوظة ©٢٠٢٦",
+      "privacy": "سياسة الخصوصية",
+      "talk": "لنتحدّث"
+    },
+    "opening": "استوديو عجيد <strong>استوديو تصميم داخلي</strong> في الدوحة، يضع <strong>الفن والحرفية</strong> في صميم عمله. نستلهم من عناصر مألوفة في <strong>البيت القطري</strong> ونعيد صياغتها بلغة معاصرة تعكس هويتنا.",
+    "intro": {
+      "note": "تأسس ٢٠٢٦ — الدوحة، قطر",
+      "body": "صُمّم الاستوديو دون أبواب، لتبقى المساحات متصلة بصريًا ويبدو الداخل أكثر انفتاحًا. وتتحقق الخصوصية من مواضع الجدران واتجاه كل فتحة. أما الألوان فمستمدة من طبيعة قطر — أزرق البحر العميق، ودرجات الرمل والتراب والحجر الجيري."
+    },
+    "chapter1": {
+      "heading": "أشكال مألوفة،\nبصياغة جديدة",
+      "body": "تستحضر أرضية التيرازو بلاط الأفنية الفاتح المنقّط في البيوت القطرية القديمة. ويستمد فاصل المدخل إيقاعه من المشربيات التقليدية، حاملًا نقشًا خاصًا مشتقًا من هوية الاستوديو البصرية.",
+      "note": "← تأسس ٢٠٢٦\nالدوحة، قطر",
+      "noteLink": "[الاستوديو]"
+    },
+    "chapter2": {
+      "heading": "الفن في قلب المكان",
+      "note": "تيرازو • مشربية • بورسلين • حجر جيري",
+      "quote": "الفن لا يُوضع في المكان لاحقًا — بل هو جزء من طريقة تصوّر المكان نفسه.",
+      "quoteSource": "[استوديو عجيد — مفهوم التصميم]",
+      "body": "يضم الداخل مجموعة من قطع البورسلين صمّمها استوديو عجيد بالتعاون مع دار بورسلين فرنسية في ليموج، عملٌ يعبّر عن تقدير الاستوديو للهوية المحلية والحرفية الرفيعة.",
+      "caption": "مجموعة البورسلين • ليموج"
+    },
+    "chapter3": {
+      "body": "تشير فتحات النوافذ إلى الأشكال التقليدية، بينما يمنحها التشطيب الأسود تباينًا جريئًا مع الأسطح الفاتحة المحيطة بها.",
+      "note1": "جميع الأعمال الفنية الأصلية للفنان القطري عيسى، مؤسس استوديو عيسى للفن وشريك في استوديو عجيد.",
+      "note2": "تيرازو • مشربية • بورسلين • بحر ورمل وحجر جيري"
+    },
+    "closing": {
+      "caption": "استوديو عجيد • الدوحة"
+    },
+    "closingStatement": "أشكالٌ مألوفة تُقرأ من جديد بيدٍ معاصرة — ليصير المكان منتميًا إلى موضعه."
+  }
+}
