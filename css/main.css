@@ -103,10 +103,16 @@ html:not(.js) .char,html:not(.js) .word,html:not(.js) .line{transform:none}
 
 @media (prefers-reduced-motion:reduce){
   .js .reveal-chars .char,.js .reveal-words .word,.js .reveal-lines .line{transform:none!important}
-  .js .reveal-up,.js .reveal-fade{opacity:1!important;transform:none!important}
+  .js .reveal-chars,.js .reveal-words,.js .reveal-lines,
+  .js .reveal-up,.js .reveal-fade{opacity:0;transform:none!important}
+  .js .reveal-chars.is-in,.js .reveal-words.is-in,.js .reveal-lines.is-in,
+  .js .reveal-up.is-in,.js .reveal-fade.is-in{opacity:1!important;
+    transition:opacity .28s ease!important}
   .js .reveal-divider{transform:scaleX(1)!important}
-  .js .reveal-image>img{-webkit-clip-path:none!important;clip-path:none!important;transform:none!important}
-  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .js .reveal-image>img{-webkit-clip-path:none!important;clip-path:none!important;
+    transform:none!important;opacity:0}
+  .js .reveal-image.is-in>img{opacity:1!important;transition:opacity .28s ease!important}
+  .scrollcue::after,.marquee__track{animation:none!important}
 }
 
 /* ==========================================================================

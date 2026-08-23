@@ -181,6 +181,14 @@
    * 2. Reveal on enter
    * ------------------------------------------------------------------ */
   const revealEls = $$('[data-reveal]');
+  const revealVisible = () => {
+    const vh = innerHeight || document.documentElement.clientHeight;
+    for (const el of revealEls) {
+      if (el.classList.contains('is-in')) continue;
+      const r = el.getBoundingClientRect();
+      if (r.top <= vh * 0.94 && r.bottom >= 0) el.classList.add('is-in');
+    }
+  };
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) {
@@ -193,6 +201,14 @@
        important than entrance animation, so reveal it immediately. */
     revealEls.forEach(el => el.classList.add('is-in'));
   }
+  /* WebKit can postpone IntersectionObserver callbacks for elements whose
+     children start fully clipped. Keep a cheap geometry fallback so Safari
+     never leaves an image or heading permanently hidden. */
+  addEventListener('scroll', revealVisible, { passive: true });
+  addEventListener('resize', revealVisible, { passive: true });
+  addEventListener('pageshow', revealVisible);
+  addEventListener('load', revealVisible);
+  revealVisible();
 
   /* ------------------------------------------------------------------ *
    * 3. Hero — canvas cross-fade + scroll-driven scale
@@ -332,6 +348,10 @@
   (function primeLazyImages() {
     const imgs = $$('img[loading="lazy"]');
     if (!imgs.length) return;
+    /* Changing a clipped image from lazy to eager only after it approaches the
+       viewport is unreliable in WebKit. Promote it immediately; the files are
+       compressed and this is preferable to a permanently blank portfolio. */
+    imgs.forEach(i => { i.loading = 'eager'; });
     const host = img => img.closest('.tl__entry, .fig, figure, .closing') ||
                         img.parentElement || img;
     if (!('IntersectionObserver' in window)) {
