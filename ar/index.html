@@ -13,8 +13,8 @@
 
 <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/HayyakumAllah-Light.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/HayyakumAllah-Medium.woff2" crossorigin>
-<link rel="preload" as="image" href="../assets/img/hero-1.webp" fetchpriority="high">
-<link rel="stylesheet" href="../css/main.css?v=0f930bab">
+<link rel="preload" as="image" href="../assets/img/hero-1.jpg" fetchpriority="high">
+<link rel="stylesheet" href="../css/main.css?v=6c256274">
 <style id="theme">:root{--bg:#d5cfc6;--ink:#061229;--heading:#061229;--accent:#582c00;--invert-bg:#061229;--invert-fg:#d5cfc6;--hero-ink:#d5cfc6;--hero-nav-ink:#ffffff;--fs-nav:var(--fs-sm)}</style>
 <link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
 
@@ -41,7 +41,15 @@ if(o)for(var k in o)document.documentElement.style.setProperty(k,o[k]);}catch(e)
    phone, a blocked request -- the visitor would be left staring at a blank
    page. This runs inline, independent of main.js, so that cannot happen. */
 setTimeout(function(){var l=document.getElementById('loader');
-  if(l&&l.className.indexOf('done')<0)l.className+=' done';},4000);
+  if(l&&l.className.indexOf('done')<0){
+    l.className+=' done';
+    /* If main.js failed to parse or execute, its reveal classes would leave
+       most content clipped/transparent. Drop the JS enhancement class so the
+       fully readable static layout becomes the fallback on older Safari. */
+    document.documentElement.className=document.documentElement.className
+      .replace(/(^|\s)js(?=\s|$)/g,' ').replace(/^\s+|\s+$/g,'');
+  }
+},4000);
 </script>
 
 <!-- navigation lives in the hero only; no persistent masthead -->
@@ -133,9 +141,9 @@ setTimeout(function(){var l=document.getElementById('loader');
     <p class="c9-4 note note--bold reveal-up" data-reveal>صُمّم الاستوديو دون أبواب، لتبقى المساحات متصلة بصريًا ويبدو الداخل أكثر انفتاحًا. وتتحقق الخصوصية من مواضع الجدران واتجاه كل فتحة. أما الألوان فمستمدة من طبيعة قطر — أزرق البحر العميق، ودرجات الرمل والتراب والحجر الجيري.</p>
   </div>
   <div class="grid-default" style="margin-top:clamp(14px,1.7vw,28px)">
-    <figure class="fig c-4" style="--ar:1400/1867"><span class="reveal-image" data-reveal><img src="../assets/img/feat-1.webp" alt="حروف نحاسية مطعّمة في التيرازو" width="1400" height="1867" loading="lazy" decoding="async"></span><figcaption>أرضية التيرازو • استوديو عجيد</figcaption></figure>
-      <figure class="fig c-4" style="--ar:1206/1608"><span class="reveal-image" data-reveal><img src="../assets/img/feat-2.webp" alt="أريكة منحنية بجوار مصباح أرضي" width="1206" height="1608" loading="lazy" decoding="async"></span><figcaption>المكتب • صالة الجلوس</figcaption></figure>
-      <figure class="fig c-4" style="--ar:1400/1867"><span class="reveal-image" data-reveal><img src="../assets/img/feat-3.webp" alt="مكتب مشترك بشاشات ومصابيح" width="1400" height="1867" loading="lazy" decoding="async"></span><figcaption>أرضية الاستوديو • محطات العمل</figcaption></figure>
+    <figure class="fig c-4" style="--ar:1400/1867"><span class="reveal-image" data-reveal><img src="../assets/img/feat-1.jpg" alt="حروف نحاسية مطعّمة في التيرازو" width="1400" height="1867" loading="lazy" decoding="async"></span><figcaption>أرضية التيرازو • استوديو عجيد</figcaption></figure>
+      <figure class="fig c-4" style="--ar:1206/1608"><span class="reveal-image" data-reveal><img src="../assets/img/feat-2.jpg" alt="أريكة منحنية بجوار مصباح أرضي" width="1206" height="1608" loading="lazy" decoding="async"></span><figcaption>المكتب • صالة الجلوس</figcaption></figure>
+      <figure class="fig c-4" style="--ar:1400/1867"><span class="reveal-image" data-reveal><img src="../assets/img/feat-3.jpg" alt="مكتب مشترك بشاشات ومصابيح" width="1400" height="1867" loading="lazy" decoding="async"></span><figcaption>أرضية الاستوديو • محطات العمل</figcaption></figure>
   </div>
   <div class="divider reveal-divider mt-6" data-reveal></div>
 </section>
@@ -150,15 +158,15 @@ setTimeout(function(){var l=document.getElementById('loader');
   <path d="M682.88,620.54c-11.95,0-21.64,9.69-21.64,21.64s9.69,21.64,21.64,21.64,21.64-9.69,21.64-21.64-9.69-21.64-21.64-21.64Z"/></svg></span><span class="tl__face"><svg viewBox="370 380 350 300"><path d="M661.21,572.15l-4.37-34.92h-10.9v-68.53c0-15.12-7.41-29.29-19.81-37.93l-48.87-34.01c-7.78-5.42-16.91-8.28-26.4-8.28h-80.17c-9.46,0-18.56,2.85-26.34,8.24l-49,33.99c-12.44,8.63-19.87,22.83-19.87,37.97v142.6c0,15.12,7.41,29.29,19.81,37.93l48.87,34.01c7.78,5.42,16.91,8.28,26.4,8.28h80.18c9.45,0,18.55-2.84,26.32-8.23l48.99-33.95c12.45-8.63,19.89-22.83,19.89-37.98v-43.91c4.68,1.12,9.21,2.41,13.37,3.96.63.24,1.27.48,1.9.74ZM568.52,409.32l48.87,34.01c8.3,5.77,13.25,15.26,13.25,25.37v68.53h-47.19l-48.45-133.45h15.86c6.35,0,12.45,1.92,17.66,5.54ZM390.77,611.29v-142.6c0-10.13,4.97-19.63,13.29-25.4l49-33.99c5.2-3.61,11.3-5.51,17.62-5.51h2.57c9.87,17.56,5.86,41.59-.51,62.02l-.14.38c-.02.07-.04.15-.07.22l-7.69,21.22c-3.79,10.47-7.58,20.95-11.36,31.42h25.32l29.74-82.37,36.31,100.58c-20.89.04-41.82.09-62.73.13v.04h-70.99c2.49,2.12,4.52,4.39,6.25,6.73,17.28,23.95,2.64,62.8-8.83,85.76l-3.97,7.16-.57-.4c-8.3-5.77-13.25-15.26-13.25-25.37ZM630.64,611.35c0,7.67-2.86,14.97-7.86,20.57l-14.58-26.89v.37l-9.5-26.15h-38.59l9.18,25.78.28,54.74c-.09-.02-.19-.08-.27-.1,1.06,4.82-1.9,9.82-5.97,12.63-2.5,1.73-5.35,2.78-8.29,3.6-1.42.2-2.85.31-4.3.31h-78.51c-8.11-.62-15.86-4.99-20.53-11.65-2.3-3.28-3.82-7.08-4.53-11.02l.06-10.17c.15-.81.32-1.61.55-2.4-.2.31-.35.64-.54.96l.21-36.89,15.86-43.63c.09-.13.17-.24.28-.37,33.74.02,67.45-.44,101.17-.15,9.44.07,19.08.11,28.75.46,11.43.4,24.48,1.29,37.12,3.18v46.84Z"/>
   <path d="M682.88,620.54c-11.95,0-21.64,9.69-21.64,21.64s9.69,21.64,21.64,21.64,21.64-9.69,21.64-21.64-9.69-21.64-21.64-21.64Z"/></svg></span></span></span>
     <h2 class="tl__title" data-split="words" data-reveal>الأعمال</h2>
-    <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--l" href="#" data-img="../assets/img/work-01.webp" style="--col:1/span 5;--ar:4/3;--labw:270%"><span class="tl__fig"><img src="../assets/img/work-01.webp" alt="صالة الجلوس" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">صالة الجلوس</span></span></a></div>
-      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-02.webp" style="--col:6/span 11;--ar:3/4;--labw:50%"><span class="tl__fig"><img src="../assets/img/work-02.webp" alt="المكتب" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">المكتب</span></span></a></div>
-      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-03.webp" style="--col:5/span 8;--ar:16/9;--labw:100%"><span class="tl__fig"><img src="../assets/img/work-03.webp" alt="تفصيل" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">تفصيل</span></span></a></div>
-      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-04.webp" style="--col:10/span 5;--ar:3/4;--labw:50%"><span class="tl__fig"><img src="../assets/img/work-04.webp" alt="محطات العمل" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">محطات العمل</span></span></a></div>
-      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-05.webp" style="--col:1/span 10;--ar:16/10;--labw:110%"><span class="tl__fig"><img src="../assets/img/work-05.webp" alt="المكتب" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">المكتب</span></span></a></div>
-      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-06.webp" style="--col:7/span 9;--ar:3/4;--labw:61%"><span class="tl__fig"><img src="../assets/img/work-06.webp" alt="الطاولة" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">الطاولة</span></span></a></div>
-      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--l" href="#" data-img="../assets/img/work-07.webp" style="--col:2/span 6;--ar:3/4;--labw:200%"><span class="tl__fig"><img src="../assets/img/work-07.webp" alt="البورسلين" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">البورسلين</span></span></a></div>
-      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-08.webp" style="--col:9/span 8;--ar:3/4;--labw:50%"><span class="tl__fig"><img src="../assets/img/work-08.webp" alt="الشاشة" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">الشاشة</span></span></a></div>
-      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-09.webp" style="--col:3/span 9;--ar:3/4;--labw:106%"><span class="tl__fig"><img src="../assets/img/work-09.webp" alt="تفصيل" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">تفصيل</span></span></a></div>
+    <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--l" href="#" data-img="../assets/img/work-01.jpg" style="--col:1/span 5;--ar:4/3;--labw:270%"><span class="tl__fig"><img src="../assets/img/work-01.jpg" alt="صالة الجلوس" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">صالة الجلوس</span></span></a></div>
+      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-02.jpg" style="--col:6/span 11;--ar:3/4;--labw:50%"><span class="tl__fig"><img src="../assets/img/work-02.jpg" alt="المكتب" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">المكتب</span></span></a></div>
+      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-03.jpg" style="--col:5/span 8;--ar:16/9;--labw:100%"><span class="tl__fig"><img src="../assets/img/work-03.jpg" alt="تفصيل" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">تفصيل</span></span></a></div>
+      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-04.jpg" style="--col:10/span 5;--ar:3/4;--labw:50%"><span class="tl__fig"><img src="../assets/img/work-04.jpg" alt="محطات العمل" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">محطات العمل</span></span></a></div>
+      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-05.jpg" style="--col:1/span 10;--ar:16/10;--labw:110%"><span class="tl__fig"><img src="../assets/img/work-05.jpg" alt="المكتب" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">المكتب</span></span></a></div>
+      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-06.jpg" style="--col:7/span 9;--ar:3/4;--labw:61%"><span class="tl__fig"><img src="../assets/img/work-06.jpg" alt="الطاولة" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">الطاولة</span></span></a></div>
+      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--l" href="#" data-img="../assets/img/work-07.jpg" style="--col:2/span 6;--ar:3/4;--labw:200%"><span class="tl__fig"><img src="../assets/img/work-07.jpg" alt="البورسلين" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">البورسلين</span></span></a></div>
+      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-08.jpg" style="--col:9/span 8;--ar:3/4;--labw:50%"><span class="tl__fig"><img src="../assets/img/work-08.jpg" alt="الشاشة" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">الشاشة</span></span></a></div>
+      <div class="tl__entry" data-reveal><span class="tl__dot" aria-hidden="true"></span><a class="tl__item tl__item--r" href="#" data-img="../assets/img/work-09.jpg" style="--col:3/span 9;--ar:3/4;--labw:106%"><span class="tl__fig"><img src="../assets/img/work-09.jpg" alt="تفصيل" loading="lazy" decoding="async"></span><span class="tl__label"><span class="tl__name">تفصيل</span></span></a></div>
   </div>
   <div class="divider reveal-divider" data-reveal></div>
 </section>
@@ -169,7 +177,7 @@ setTimeout(function(){var l=document.getElementById('loader');
   <div class="grid-default">
     <figure class="fig c1-5">
       <div class="reveal-image" data-reveal>
-        <img src="../assets/img/feat-2.webp" alt="" width="1600" height="1100" loading="lazy" decoding="async">
+        <img src="../assets/img/feat-2.jpg" alt="" width="1600" height="1100" loading="lazy" decoding="async">
       </div>
     </figure>
     <div class="c7-6">
@@ -197,7 +205,7 @@ setTimeout(function(){var l=document.getElementById('loader');
     </div>
     <figure class="fig c-7">
       <div class="reveal-image" data-reveal>
-        <img src="../assets/img/feat-3.webp" alt="" width="1600" height="1100" loading="lazy" decoding="async">
+        <img src="../assets/img/feat-3.jpg" alt="" width="1600" height="1100" loading="lazy" decoding="async">
       </div>
       <figcaption>مجموعة البورسلين • ليموج</figcaption>
     </figure>
@@ -220,7 +228,7 @@ setTimeout(function(){var l=document.getElementById('loader');
 <!-- ===================== S7 - closing image + statement ===================== -->
 <section class="px" style="padding-bottom:clamp(18px,2vw,30px)">
   <figure class="closing" data-reveal>
-    <img src="../assets/img/closing.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+    <img src="../assets/img/closing.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async">
     <figcaption>استوديو عجيد • الدوحة</figcaption>
   </figure>
   <p class="closing-line" data-split="lines" data-reveal>أشكالٌ مألوفة تُقرأ من جديد بيدٍ معاصرة — ليصير المكان منتميًا إلى موضعه.</p>
@@ -243,11 +251,11 @@ setTimeout(function(){var l=document.getElementById('loader');
     <div class="foot-mark foot-mark--lat"><svg viewBox="182.44 472.22 715.08 135.55" role="presentation" aria-hidden="true"><defs><clipPath id="fm-ar-lat"><path class="ltr" style="--i:0" d="M316.74,547.83h-35.74l-27.44-75.6h-30.88l6.11,22.11-15.85,43.8-3.51,9.69-12.86,35.53-12.39,22.32h25.35l.19-22.32,8.39-23.06h1.49c17.26,0,34.49-.24,51.73-.08,4.98.03,10.06.06,15.16.24,10.9.38,21.86,1.54,31.96,5.31.19.06.36.14.56.22l-2.27-18.16ZM251.09,547.83s.05.05.08.08h-28.49l.03-.08,19.04-52.73,19,52.65.03.08h-9.69ZM293.98,583.57l-4.95-13.66h-20.16l4.84,13.59.19,22.18h32.47l-12.39-22.32v.21Z"/>
             <path class="ltr" style="--i:1" d="M408.71,490.53c9.91-4,26.69-5.91,42.13-5.91h20.4v79.69c0,16.96-7.63,31.07-28.21,31.07-19.25,0-36.79-10.87-43.85-26.5v27.26c10.29,7.43,27.64,11.63,43.85,11.63,34.31,0,47.28-20.21,47.28-36.41v-77.01l5.91-22.11h-85.21l-2.29,18.3Z"/>
             <polygon class="ltr" style="--i:2" points="659.41 472.23 628.15 472.23 634.25 494.35 634.25 583.37 628.15 605.67 659.41 605.67 653.31 583.37 653.31 494.35 659.41 472.23"/>
-            <path class="ltr" style="--i:3" d="M831.2,472.23h-47.28l6.1,22.11v89.02l-6.1,22.3h47.28c43.08,0,64.62-26.69,64.62-66.72s-22.3-66.72-64.62-66.72ZM826.05,593.28h-16.97v-108.66h16.97c38.89,0,50.71,24.21,50.71,54.33s-14.11,54.33-50.71,54.33Z"/></clipPath></defs><g clip-path="url(#fm-ar-lat)"><image href="../assets/img/wordmark-fill-lat.webp" x="182.44" y="336.67" width="715.08" height="271.10" preserveAspectRatio="xMidYMid slice" style="--fmh:135.55"></image></g></svg></div>
+            <path class="ltr" style="--i:3" d="M831.2,472.23h-47.28l6.1,22.11v89.02l-6.1,22.3h47.28c43.08,0,64.62-26.69,64.62-66.72s-22.3-66.72-64.62-66.72ZM826.05,593.28h-16.97v-108.66h16.97c38.89,0,50.71,24.21,50.71,54.33s-14.11,54.33-50.71,54.33Z"/></clipPath></defs><g clip-path="url(#fm-ar-lat)"><image href="../assets/img/wordmark-fill-lat.jpg" x="182.44" y="336.67" width="715.08" height="271.10" preserveAspectRatio="xMidYMid slice" style="--fmh:135.55"></image></g></svg></div>
     <div class="foot-mark foot-mark--ar"><svg viewBox="182.44 475.77 715.08 128.46" role="presentation" aria-hidden="true"><defs><clipPath id="fm-ar-ar"><path class="ar-body" d="M871.49,559.48l-36.64-.05h62.67l-2.47-14.01-2-11.41c-11.45,6.57-23.51,10.71-38.88,11.41h-37.16c-.28,0-.47-.42-.61-1.07-.14-.84-.23-1.72-.37-2.61v-.42c-1.35-11.64-1.26-23.8,2.7-34.83,2.33-6.47,6.43-12.48,12.29-15.97,13.41-7.91,29.24-.98,39.53,8.94.05,0,.05.05.05.05,1.02.98,2,2,2.93,3.07,1.96,2.23,3.59,4.7,5.22,7.45l.6-4.19,1.54-10.99,1.12-7.26c-5.41-2.86-11.29-5.59-18.1-7.66-1-.22-2.64-.59-3.64-.81-11.22-1.68-22.86-2.1-33.95.75-14.53,3.72-26.45,13.31-32.08,27.33-2.1,5.31-3.59,11.27-4.47,17.74-.93,6.47-1.26,13.27-1.02,20.49h-96.71c.23-7.22-.09-14.01-1.02-20.49-.84-6.47-2.37-12.43-4.47-17.74-5.63-14.02-17.55-23.61-32.08-27.33-11.08-2.84-22.72-2.42-33.95-.75-1,.22-2.64.59-3.64.81-6.81,2.07-12.69,4.8-18.1,7.66l1.12,7.26,1.54,10.99.6,4.19c1.63-2.75,3.26-5.22,5.22-7.45.93-1.07,1.91-2.1,2.93-3.07t.05-.05c10.24-9.92,26.12-16.85,39.53-8.94,5.87,3.49,9.92,9.5,12.29,15.97,3.96,11.03,4.05,23.19,2.75,34.83,0,.19-.05.28-.05.42-.14.89-.23,1.77-.33,2.61-.19.65-.37,1.07-.65,1.07h-93.69s.01-.07.01-.11c-.07.07-.13.11-.21.11h-14.82c.08,0,.16,0,.24,0h-83.69c-1.96,0-3.73-.42-5.31-1.16-1.44-.7-2.23-1.82-2.33-3.49-.05-.14-.05-.28-.05-.42l1.26-64.58-25.24,4.05c7.12,12.62,10.1,29.52,10.1,47.3v14.3c0,.74-.28,1.35-.84,1.81-.56.51-1.3.98-2.28,1.26-.93.37-1.96.61-3.12.7-1.12.19-2.28.23-3.4.23h-163.38c.23-7.22-.09-14.01-1.03-20.49-.88-6.47-2.37-12.43-4.52-17.74-5.63-14.02-17.51-23.61-32.08-27.33-11.04-2.84-22.68-2.42-33.9-.75-.99.22-2.62.58-3.61.8-6.86,2.07-12.71,4.81-18.13,7.67l1.12,7.26,1.54,10.99.56,3.87c1.54-2.61,3.17-4.98,5.03-7.13,3.26-3.87,6.89-7.03,10.71-9.5,3.82-2.47,7.87-4.19,12.01-5.12,1.86-.47,3.73-.75,5.54-.84.28,0,.6,0,.88-.05h.93c.33,0,.61,0,.93.05,3.96.14,7.96,1.17,11.73,3.4,5.87,3.49,9.96,9.5,12.29,15.97,3.96,11.03,4.05,23.19,2.7,34.83,0,.19-.05.28-.05.42-.09.89-.19,1.77-.33,2.61-.09.47-.23.79-.37.98,0,.05-.05.09-.05.19h-9.83c-1.72,0-3.45,0-5.17-.09h-8.15c-10.57-.47-19.56-2.56-27.84-5.96-3.82-1.53-7.45-3.35-11.08-5.45l-2,11.41-2.42,14.01h58.95v.05h198.33c4.87,0,9.62-1.48,13.66-4.2,1.65-1.12,3.18-2.23,4.37-3.34.35.42.74.84,1.17,1.26,4.31,4.2,10.27,6.29,16.3,6.29h63.8-9.44s32.9.01,32.9.01h0s308.96-.01,308.96-.01Z"/>
             <path class="ar-dot" style="--i:0" d="M645.02,575.99c-7.8,0-14.12,6.32-14.12,14.12s6.32,14.12,14.12,14.12,14.12-6.32,14.12-14.12-6.32-14.12-14.12-14.12Z"/>
             <path class="ar-dot" style="--i:1" d="M471.09,575.99c-7.8,0-14.12,6.32-14.12,14.12s6.32,14.12,14.12,14.12,14.12-6.32,14.12-14.12-6.32-14.12-14.12-14.12Z"/>
-            <path class="ar-dot" style="--i:2" d="M443.17,575.99c-7.8,0-14.12,6.32-14.12,14.12s6.32,14.12,14.12,14.12,14.12-6.32,14.12-14.12-6.32-14.12-14.12-14.12Z"/></clipPath></defs><g clip-path="url(#fm-ar-ar)"><image href="../assets/img/wordmark-fill-ar.webp" x="182.44" y="347.31" width="715.08" height="256.92" preserveAspectRatio="xMidYMid slice" style="--fmh:128.46"></image></g></svg></div>
+            <path class="ar-dot" style="--i:2" d="M443.17,575.99c-7.8,0-14.12,6.32-14.12,14.12s6.32,14.12,14.12,14.12,14.12-6.32,14.12-14.12-6.32-14.12-14.12-14.12Z"/></clipPath></defs><g clip-path="url(#fm-ar-ar)"><image href="../assets/img/wordmark-fill-ar.jpg" x="182.44" y="347.31" width="715.08" height="256.92" preserveAspectRatio="xMidYMid slice" style="--fmh:128.46"></image></g></svg></div>
   </div>
   <div class="foot-bar" style="opacity:.6">
     <span>جميع الحقوق محفوظة ©٢٠٢٦</span>
@@ -257,7 +265,7 @@ setTimeout(function(){var l=document.getElementById('loader');
 
 <div id="preview" aria-hidden="true"></div>
 
-<script>window.AJID_HERO = ["../assets/img/hero-1.webp", "../assets/img/hero-2.webp", "../assets/img/hero-3.webp", "../assets/img/hero-4.webp", "../assets/img/hero-5.webp"];</script>
-<script src="../js/main.js?v=fb5ae45a" defer></script>
+<script>window.AJID_HERO = ["../assets/img/hero-1.jpg", "../assets/img/hero-2.jpg", "../assets/img/hero-3.jpg", "../assets/img/hero-4.jpg", "../assets/img/hero-5.jpg"];</script>
+<script src="../js/main.js?v=32fb6efa" defer></script>
 </body>
 </html>

@@ -263,7 +263,15 @@ if(o)for(var k in o)document.documentElement.style.setProperty(k,o[k]);}}catch(e
    phone, a blocked request -- the visitor would be left staring at a blank
    page. This runs inline, independent of main.js, so that cannot happen. */
 setTimeout(function(){{var l=document.getElementById('loader');
-  if(l&&l.className.indexOf('done')<0)l.className+=' done';}},4000);
+  if(l&&l.className.indexOf('done')<0){{
+    l.className+=' done';
+    /* If main.js failed to parse or execute, its reveal classes would leave
+       most content clipped/transparent. Drop the JS enhancement class so the
+       fully readable static layout becomes the fallback on older Safari. */
+    document.documentElement.className=document.documentElement.className
+      .replace(/(^|\\s)js(?=\\s|$)/g,' ').replace(/^\\s+|\\s+$/g,'');
+  }}
+}},4000);
 </script>
 
 <!-- navigation lives in the hero only; no persistent masthead -->
