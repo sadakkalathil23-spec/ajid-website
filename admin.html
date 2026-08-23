@@ -158,7 +158,7 @@ let DATA = null;
 let dirty = false;
 
 /* ---------- path helpers so every field binds generically ---------- */
-const get = (o, p) => p.split('.').reduce((a, k) => a?.[k], o);
+const get = (o, p) => p.split('.').reduce((a, k) => a == null ? undefined : a[k], o);
 const set = (o, p, v) => {
   const ks = p.split('.'); const last = ks.pop();
   ks.reduce((a, k) => a[k], o)[last] = v;

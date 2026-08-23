@@ -180,13 +180,19 @@
   /* ------------------------------------------------------------------ *
    * 2. Reveal on enter
    * ------------------------------------------------------------------ */
-  const io = new IntersectionObserver((entries) => {
-    for (const e of entries) {
-      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
-    }
-  }, { rootMargin: '0px 0px -12% 0px', threshold: 0 });
-
-  $$('[data-reveal]').forEach(el => io.observe(el));
+  const revealEls = $$('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      }
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    /* Safari before 12.1 has no IntersectionObserver. Content is more
+       important than entrance animation, so reveal it immediately. */
+    revealEls.forEach(el => el.classList.add('is-in'));
+  }
 
   /* ------------------------------------------------------------------ *
    * 3. Hero — canvas cross-fade + scroll-driven scale
@@ -201,7 +207,7 @@
   // hero frames come from content/site.json via the build step
   const SRC = (window.AJID_HERO && window.AJID_HERO.length)
     ? window.AJID_HERO
-    : ['assets/img/hero-1.webp'];
+    : ['assets/img/hero-1.jpg'];
 
   const frames = [];
   let loaded = 0, ctx = null, dpr = 1;
@@ -272,8 +278,8 @@
     // Driven by timers, not rAF — a tab that loads in the background has its
     // frame callbacks suspended, and the hero must not be stuck shut.
     document.body.classList.add('hero-open');
-    setTimeout(() => $('#markLat')?.classList.add('is-in'), 340);
-    setTimeout(() => $('#markAr')?.classList.add('is-in'), 620);
+    setTimeout(() => { const el = $('#markLat'); if (el) el.classList.add('is-in'); }, 340);
+    setTimeout(() => { const el = $('#markAr'); if (el) el.classList.add('is-in'); }, 620);
   }
 
   function loadFrame(idx) {
@@ -508,8 +514,10 @@
   let open = false;
   function setDrawer(state) {
     open = state;
-    drawer?.classList.toggle('open', open);
-    drawer?.setAttribute('aria-hidden', String(!open));
+    if (drawer) {
+      drawer.classList.toggle('open', open);
+      drawer.setAttribute('aria-hidden', String(!open));
+    }
     document.body.style.overflow = open ? 'hidden' : '';
     toggles.forEach(t => {
       t.setAttribute('aria-expanded', String(open));

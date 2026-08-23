@@ -162,7 +162,8 @@ html:not(.js) .char,html:not(.js) .word,html:not(.js) .line{transform:none}
    ========================================================================== */
 .hero{position:relative;height:250vh;height:250svh}
 .hero__sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--invert-bg)}
-.hero__media{position:absolute;inset:0;overflow:hidden;background:var(--navy)}
+.hero__media{position:absolute;inset:0;overflow:hidden;background-color:var(--navy);
+  background-image:url("../assets/img/hero-1.jpg");background-size:cover;background-position:center}
 /* first-frame animation: a small window in the middle of the dark screen
    opens out to full bleed while the wordmark letters arrive */
 .js .hero__media{-webkit-clip-path:inset(43% 45% 43% 45%);clip-path:inset(43% 45% 43% 45%)}
