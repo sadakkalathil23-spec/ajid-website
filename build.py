@@ -79,7 +79,7 @@ VB_ARABIC = "182.44 475.77 715.08 128.46"   # tight bbox of عجيد — same x-
 # --------------------------------------------------------------------------
 def figure(img, alt, caption, cls="fig-wide", w=1600, h=1100):
     return f'''<figure class="fig {cls}">
-      <div class="reveal-image" data-reveal><img src="{img}" alt="{alt}" width="{w}" height="{h}" loading="lazy" decoding="async"></div>
+      <div class="reveal-image" data-reveal><img src="{img}" alt="{alt}" width="{w}" height="{h}" loading="eager" decoding="async"></div>
       <figcaption>{caption}</figcaption>
     </figure>'''
 
@@ -130,7 +130,7 @@ def timeline_entries(items):
             f'style="--col:{start_col}/span {span};--ar:{it.get("ar","4/3")};--labw:{it.get("labw",50)}%">'
             f'<span class="tl__fig">'
             f'<img src="{it["img"]}" alt="{it["name"]}" '
-            f'loading="lazy" decoding="async"></span>'
+            f'loading="eager" decoding="async"></span>'
             f'<span class="tl__label"><span class="tl__name">{it["name"]}</span></span>'
             f'</a>'
             f'</div>')
@@ -145,7 +145,7 @@ def intro_images(cfg, t):
             f'<figure class="fig c-4" style="--ar:{f.get("w",3)}/{f.get("h",4)}">'
             f'<span class="reveal-image" data-reveal>'
             f'<img src="{cfg["images"]["feature"][i]}" alt="{f["alt"]}" '
-            f'width="{f.get("w",1400)}" height="{f.get("h",1866)}" loading="lazy" decoding="async"></span>'
+            f'width="{f.get("w",1400)}" height="{f.get("h",1866)}" loading="eager" decoding="async"></span>'
             f'<figcaption>{f["caption"]}</figcaption></figure>')
     return SEP.join(out)
 
@@ -379,7 +379,7 @@ setTimeout(function(){{var l=document.getElementById('loader');
   <div class="grid-default">
     <figure class="fig c1-5">
       <div class="reveal-image" data-reveal>
-        <img src="{im["chapter1"]}" alt="" width="1600" height="1100" loading="lazy" decoding="async">
+        <img src="{im["chapter1"]}" alt="" width="1600" height="1100" loading="eager" decoding="async">
       </div>
     </figure>
     <div class="c7-6">
@@ -407,7 +407,7 @@ setTimeout(function(){{var l=document.getElementById('loader');
     </div>
     <figure class="fig c-7">
       <div class="reveal-image" data-reveal>
-        <img src="{im["chapter2"]}" alt="" width="1600" height="1100" loading="lazy" decoding="async">
+        <img src="{im["chapter2"]}" alt="" width="1600" height="1100" loading="eager" decoding="async">
       </div>
       <figcaption>{t["chapter2"]["caption"]}</figcaption>
     </figure>
@@ -430,7 +430,7 @@ setTimeout(function(){{var l=document.getElementById('loader');
 <!-- ===================== S7 - closing image + statement ===================== -->
 <section class="px" style="padding-bottom:clamp(18px,2vw,30px)">
   <figure class="closing" data-reveal>
-    <img src="{im["closing"]}" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+    <img src="{im["closing"]}" alt="" width="1920" height="1080" loading="eager" decoding="async">
     <figcaption>{t["closing"]["caption"]}</figcaption>
   </figure>
   <p class="closing-line" data-split="lines" data-reveal>{t["closingStatement"]}</p>
